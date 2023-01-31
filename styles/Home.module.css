@@ -128,14 +128,50 @@
   background-color:#6EEA84;
 }
 .rightsection{
-
+display: flex;
+flex-direction: column;
+}
+.hr{
+  margin-top:33px ;
+  margin-bottom: 20px;
+  border: none;
+  border-top: 2px dotted #6EEA84;
+  height: 1px;
+}
+.clearcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clearbtn{
+  box-sizing: border-box;
+  width: 140px;
+  height: 33px;
+  border: 1px solid #383838;
+  border-radius: 25px;
+  background-color: white;
+}
+.radiobtn{
+  background-color: #6EEA84;
+  font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #383838;
+}
+.radiocontainer{
+display: flex;
+flex-direction: column;
+gap:5px
 }
 .grid{
   gap:33px;
+  margin-bottom: 20px;
 }
 .leftsection{
 display: flex;
 flex-direction: column;
+margin:8px
 }
 .cardcontainer{
   display: flex;
@@ -148,9 +184,7 @@ flex-direction: column;
   border: rgb(201, 201, 201) solid 1px;
   box-sizing:content-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
-
 .cardimage {
   width: 211px;
   border-radius: 20px 20px 0 0;
@@ -178,4 +212,25 @@ margin-left: 111px;
   font-weight: 600;
   font-size: 25px;
   line-height: 29px;
+}
+
+.pagsection{
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+
+  
+}
+.pagbuton{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  border:transparent solid 3px;
+  border-radius: 50px;
+
 }

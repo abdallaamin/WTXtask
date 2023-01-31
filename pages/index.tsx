@@ -116,64 +116,69 @@ const Home: NextPage = () => {
   }
   return (
     <div className={styles.container}>
+
       <section className={styles.rightsection}>
-        <h2>Filters</h2>
-        <div>
-          <button onClick={() => clearAllFilters()}>Clear all filters</button>
+        <div className={styles.clearcontainer}>
+          <button  className={styles.clearbtn} onClick={() => clearAllFilters()}>Clear all</button>
         </div>
-        <div>
-          <label htmlFor="brand-select">Brand - {brand}</label>
-          <select
-            id="brand-select"
-            value={brand}
-            onChange={(e) => setBrand(e.target.value)}
-          >
-            <option key="default" value="">
-              Select brand
-            </option>
+        <div className={styles.hr} />
+        <div >
+          <h4>Brand</h4>
+          <div className={styles.radiocontainer}>
             {brandOptions?.map((option ,index) => (
-              <option key={index} value={option.value}>
-                {option.label}
-              </option>
+            <label>
+            <input
+              className={styles.radiobtn}
+              type="radio"
+              key={index} 
+              checked={option.value == brand }
+              value={option.value}
+              onChange={(e) => setBrand(e.target.value)}
+            />
+              {option.label}
+          </label>
             ))}
-          </select>
+          </div>
         </div>
+        <div className={styles.hr} />
         <div>
-          <label htmlFor="brand-select">Model - {model}</label>
-          <select
-            id="brand-select"
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-          >
-            <option key="default" value="">
-              Select model
-            </option>
+          <h4>Model</h4> 
+          <div className={styles.radiocontainer}>
             {modelOptions?.map((option , index) => (
-              <option key={index} value={option.value}>
+              <label>
+              <input
+                  className={styles.radiobtn}
+                type="radio" 
+                key={index} 
+                checked={option.value == model}
+                value={option.value} 
+                onChange={(e) => setModel(e.target.value)}
+                />
                 {option.label}
-              </option>
+                </label>
             ))}
-          </select>
+          </div>
         </div>
-        
       </section>
       
 
       <section className={styles.leftsection}>
         <div className={styles.grid}>
           {results.map((result) => (
-            <div >
+            <div>
             <CarCard id={result.id} image={result.image} name={result.name} brand={result.brand} model={result.model} price={result.price?.value} />
             </div>
           ))}
         </div>
 
-        <div>
+        <div className={styles.pagsection}>
           {Array.from({ length: pagesOptions.numberOfPages }).map(
             (_page, index) => (
               <button
+              className={styles.pagbuton}
                 style={{
-                  color: pagesOptions.current === index + 1 ? "red" : "initial",
+                  color: pagesOptions.current === index + 1 ? "black" : "#969696",
+                  border: pagesOptions.current === index + 1 ? '#6EEA84 solid 2px' : "initial",
                 }}
                 onClick={(e) => setPage(index + 1)}
                 key={index}
