@@ -126,7 +126,7 @@ const Home: NextPage = () => {
           <h4>Brand</h4>
           <div className={styles.radiocontainer}>
             {brandOptions?.map((option ,index) => (
-            <label>
+            <label key={index}>
             <input
               className={styles.radiobtn}
               type="radio"
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
           <h4>Model</h4> 
           <div className={styles.radiocontainer}>
             {modelOptions?.map((option , index) => (
-              <label>
+              <label key={index}>
               <input
                   className={styles.radiobtn}
                 type="radio" 
@@ -164,8 +164,8 @@ const Home: NextPage = () => {
 
       <section className={styles.leftsection}>
         <div className={styles.grid}>
-          {results.map((result) => (
-            <div>
+          {results.map((result ,index) => (
+            <div key={index}>
             <CarCard id={result.id} image={result.image} name={result.name} brand={result.brand} model={result.model} price={result.price?.value} />
             </div>
           ))}
