@@ -234,3 +234,59 @@ margin-left: 111px;
   border-radius: 50px;
 
 }
+
+
+/*===================================*/
+/*login */
+.logincontainer{
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label{
+  width: 70px;
+  height: 17px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #969696;
+
+}
+
+.nameinput{
+  margin-top: 8px;
+  text-align: center;
+  width: 336px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #6EEA84;
+  border-radius: 20px;
+}
+
+.passinput{
+  margin-top: 8px;
+  text-align: center;
+  width: 336px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #6EEA84;
+  border-radius: 20px;
+}
+.submitcontainer{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submitbtn{
+  width: 86px;
+  height: 34px;
+  background: #6EEA84;
+  border: transparent solid;
+  border-radius: 20px;
+}

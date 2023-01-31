@@ -111,12 +111,12 @@ const Home: NextPage = () => {
           <a href="/my-account">Go to my account page</a>
         </div>
         </section>
-        <Login />
+
         */
   }
   return (
     <div className={styles.container}>
-
+      <Login />
       <section className={styles.rightsection}>
         <div className={styles.clearcontainer}>
           <button  className={styles.clearbtn} onClick={() => clearAllFilters()}>Clear all</button>
