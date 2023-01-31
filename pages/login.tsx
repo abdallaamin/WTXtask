@@ -7,7 +7,7 @@ const Login = () => {
     fetch(`/api/auth?username=${username}&password=${password}`)
       .then((r) => r.json())
       .then((data) => console.log(data));
-  }, []);
+  }, [username, password]);
 
   return (
     <section >

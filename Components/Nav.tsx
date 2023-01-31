@@ -38,7 +38,7 @@ const Nav = (props: Props) => {
 
             <div>
             <Link 
-            href="https://github.com/abdallaamin" 
+                  href="https://github.com/abdallaamin/WTXtask" 
             target="_blank"
             rel="noopener noreferrer">
             <a style={{ color: 'white' }}>
