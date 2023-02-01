@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Popup from 'reactjs-popup';
-import Modal from '../Components/modal'
+import Modal from '../Components/Modal'
 
 const Login = () => {
   
