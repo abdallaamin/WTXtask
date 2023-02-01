@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import Login from "./login";
 import CarCard from '../Components/CarCard'
 
+
 type Vehicle = {
   image: string;
   name: string;
@@ -114,9 +115,19 @@ const Home: NextPage = () => {
 
         */
   }
+  const getpopup=()=>{
+  //   render()<Element> (
+  //     <div>
+      
+  //     </div>
+  //   )
+  // }
+  }
+
   return (
+    <>
+    <Login />
     <div className={styles.container}>
-      <Login />
       <section className={styles.rightsection}>
         <div className={styles.clearcontainer}>
           <button  className={styles.clearbtn} onClick={() => clearAllFilters()}>Clear all</button>
@@ -190,6 +201,7 @@ const Home: NextPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -256,7 +256,16 @@ margin-left: 111px;
   color: #969696;
 
 }
-
+.loginheader{
+  display: 'flex'; 
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #383838;
+  margin-bottom: 37px;
+}
 .nameinput{
   margin-top: 8px;
   text-align: center;
@@ -293,4 +302,60 @@ margin-left: 111px;
   font-size: 16px;
   line-height: 19px;
   color: #383838;
+}
+
+
+/*----------------------------------------------------*/
+/*modal*/ 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 630px;
+  height: 450px;
+  border: rgb(155, 155, 155) solid 1px;
+  z-index: 999;
+  font-size: 12px;
+  background: #FCFCFC;
+  border-radius: 20px;
+}
+
+.modal>.header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+
+}
+
+.modal>.content {
+  width: 100%;
+  padding: 10px 5px;
+  
+
+}
+
+.modal>.actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.modal>.close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+  
+  
 }
