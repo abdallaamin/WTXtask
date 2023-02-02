@@ -26,9 +26,9 @@ export default function Faq() {
     return (
         <div>
             {
-                faq.map((f) => (
-            <div>
-            <Accordion key={f.id}>
+                faq.map((f , index) => (
+                <div key={index}>
+            <Accordion >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
