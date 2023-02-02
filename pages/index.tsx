@@ -129,7 +129,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {show ?<Login onClose={()=>setShow(false)}/>:null }
+      {show && <Login onClose={()=>setShow(false)}/>}
     <div className={styles.container}>
       <section className={styles.rightsection}>
         <div className={styles.clearcontainer}>
