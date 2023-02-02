@@ -54,6 +54,9 @@ const Home: NextPage = () => {
   const [results, setResults] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(false);
 
+  //show popup 
+  const [show, setShow] = useState(false)
+
   const [brandOptions, setBrandOptions] = useState<Options["data"]>([]);
   const [modelOptions, setModelOptions] = useState<Options["data"]>([]);
   const [pagesOptions, setPagesOptions] = useState<{
@@ -101,10 +104,18 @@ const Home: NextPage = () => {
     });
   }, []);
 
+  //show model only after load by one 1.5 sec
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true)
+    }, 1500)
+  }, [])
+
   if (loading) {
     return <div>App is loading</div>;
   }
 
+    
   {
     /*  <h1>Welcome to WTX search</h1>
       <section>
@@ -115,18 +126,10 @@ const Home: NextPage = () => {
 
         */
   }
-  const getpopup=()=>{
-  //   render()<Element> (
-  //     <div>
-      
-  //     </div>
-  //   )
-  // }
-  }
 
   return (
     <>
-    <Login />
+      {show ?<Login onClose={()=>setShow(false)}/>:null }
     <div className={styles.container}>
       <section className={styles.rightsection}>
         <div className={styles.clearcontainer}>

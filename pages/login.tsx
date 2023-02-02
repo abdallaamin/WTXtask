@@ -1,24 +1,82 @@
+import React, { useState, useEffect, useCallback } from "react";
 import styles from '../styles/Home.module.css'
-import Popup from 'reactjs-popup';
-import Modal from '../Components/Modal'
 
-const Login = () => {
-  
+
+type Props = {
+onClose: ()=> void 
+}
+
+const Login = ({ onClose }: Props) => {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const authenticate = useCallback(() => {
+    fetch(`/api/auth?username=${username}&password=${password}`)
+      .then((r) => r.json())
+      .then((data) => {
+        console.log(data)
+      });
+  }, [username, password]);
+
+  //popup close whenclick outside 
+  const backDropHandler = (e: MouseEvent): void => {
+    e.preventDefault();
+      onClose();
+  }
+  useEffect(() => {
+    // attach event listener to the whole windor with our handler
+    window.addEventListener('click', backDropHandler);
+    // remove the event listener when the modal is closed
+    return () => window.removeEventListener('click', backDropHandler);
+  }, []);
+
   return (
-    <Popup
-      trigger={<button className="button"> Open Modal </button>}
-      modal
-      
-    >
-      {close => (
-        <div className={styles.modal}>
-          <div>
-          <Modal/>
-        </div>
-        </div>
-      )}
-    </Popup>
+    <div className={styles.modaloverlay}>
+      <div className={styles.modal}>
+        <section >
+          <div className={styles.loginheader} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            Login into WTX </div>
+          <div className={styles.logincontainer}>
+            <div style={{ marginBottom: '20px' }}>
+              <label className={styles.label}>
+                Username
+              </label>
+              <div >
+                <input
+                  className={styles.nameinput}
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  type="text"
+                  autoComplete="username"
+                  placeholder="Username"
+                />
+              </div>
+            </div>
+            <div >
+              <label className={styles.label}>
+                Password
+              </label>
+            </div>
+            <div>
+              <input
+                className={styles.passinput}
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="password"
+                placeholder="Type your password"
+              />
+              <div className={styles.submitcontainer}>
+                <input className={styles.submitbtn} onClick={() => authenticate()} type="submit" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 };
-
+  
+    
 export default Login;
