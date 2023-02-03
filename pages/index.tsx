@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { GetServerSideProps } from 'next';
 import { useCallback, useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import Login from "./login";
@@ -77,34 +78,18 @@ const Home: NextPage = () => {
     fetchSearchResults({ brand, model, page }).then((result) => {
       setResults(result.data);
       setPagesOptions(result.metadata);
-      setLoading(false);
     });
-  }, [brand, model, page]);
-
-  useEffect(() => {
-    setModel("");
-    setLoading(true);
     fetchModelOptions().then((options) => {
       setModelOptions(options.data);
-      setLoading(false);
     });
-  }, [brand]);
-
-  useEffect(() => {
-    setLoading(true);
     fetchBrandOptions().then((options) => {
       setBrandOptions(options.data);
-      setLoading(false);
     });
+    setLoading(false);
+  }, [brand, model, page]);
 
-    setLoading(true);
-    fetchModelOptions().then((options) => {
-      setModelOptions(options.data);
-      setLoading(false);
-    });
-  }, []);
 
-  //show model only after load by one 1.5 sec
+ //show model only after load by one 1.5 sec
   useEffect(() => {
     setTimeout(() => {
       setShow(true)
@@ -115,17 +100,6 @@ const Home: NextPage = () => {
     return <div>App is loading</div>;
   }
 
-    
-  {
-    /*  <h1>Welcome to WTX search</h1>
-      <section>
-        <div>
-          <a href="/my-account">Go to my account page</a>
-        </div>
-        </section>
-
-        */
-  }
 
   return (
     <>
@@ -208,4 +182,17 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+
+
+
+
+// export const getServerSideProps: GetServerSideProps<Search> = async (ctx) => {
+//   // Fetch data from external API
+//   const res = await fetch(``)
+//   const data = await res.json()
+
+//   // Pass data to the page via props
+//   return { props: { data } }
+// }
+
+export default Home
