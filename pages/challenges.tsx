@@ -102,9 +102,9 @@ export default function Faq() {
                     <Typography>{f.question}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <code>
                         {f.answer}
-                    </Typography>
+                    </code>
                 </AccordionDetails>
             </Accordion>
             </div>
