@@ -63,17 +63,17 @@ const possiblefaq = [
     {
         id: 15,
         question: "If you had to make this page faster, what would you do?",
-        answer: "bina",
+        answer: "",
     },
     {
         id: 16,
         question: "Imagine you had a loader implemented on the search page, but now you want to use it in multiple other pages, what would you do?",
-        answer: "bina",
+        answer: "",
     },
     {
         id: 17,
         question: "Any tools/approaches you would use to make this code better?",
-        answer: "bina",
+        answer: "",
     },
     {
         id: 86,
