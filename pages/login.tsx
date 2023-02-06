@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import ReactDOM from "react-dom";
 import styles from '../styles/Home.module.css'
 
 
@@ -7,6 +8,7 @@ onClose: ()=> void
 }
 
 const Login = ({ onClose }: Props) => {
+  const [isBrowser, setIsBrowser] = useState(false);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,12 +21,18 @@ const Login = ({ onClose }: Props) => {
       });
   }, [username, password]);
 
+
+  const modalWrapperRef = React.useRef();
+
   //popup close whenclick outside 
   const backDropHandler = (e: MouseEvent): void => {
-    e.preventDefault();
+    if (!modalWrapperRef?.current?.contains(e.target)) {
       onClose();
+    }
   }
   useEffect(() => {
+    setIsBrowser(true);
+
     // attach event listener to the whole windor with our handler
     window.addEventListener('click', backDropHandler);
     // remove the event listener when the modal is closed
@@ -33,7 +41,7 @@ const Login = ({ onClose }: Props) => {
 
   return (
     <div className={styles.modaloverlay}>
-      <div className={styles.modal}>
+      <div className={styles.modal} ref={modalWrapperRef}>
         <section >
           <div className={styles.loginheader} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             Login into WTX </div>
@@ -76,6 +84,15 @@ const Login = ({ onClose }: Props) => {
       </div>
     </div>
   );
+
+  if (isBrowser) {
+    return ReactDOM.createPortal(
+      modalContent,
+      document.getElementById("modal-root")
+    );
+  } else {
+    return null;
+  }
 };
   
     
