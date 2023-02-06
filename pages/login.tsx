@@ -22,7 +22,7 @@ const Login = ({ onClose }: Props) => {
   }, [username, password]);
 
 
-  const modalWrapperRef = React.useRef();
+  const modalWrapperRef = React.useRef<any>();
 
   //popup close whenclick outside 
   const backDropHandler = (e: MouseEvent): void => {
@@ -87,7 +87,7 @@ const Login = ({ onClose }: Props) => {
 
   if (isBrowser) {
     return ReactDOM.createPortal(
-      modalContent,
+      modal,
       document.getElementById("modal-root")
     );
   } else {
