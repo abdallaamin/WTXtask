@@ -6,7 +6,9 @@ as you can see this is my purposed solution to the challenge that was giving to 
 Unfortunately time wasnt really on my side , 
 
 as you will see i deployed the website on vercel already and it did setup  apip line , of the things that i loved about this challenge that i created a backlog for it 
-and then started to work on them ( divide and conqure)![board](https://user-images.githubusercontent.com/26660809/216873489-9c585844-37e6-4582-be27-f12fd2bdbbd4.png)
+and then started to work on them ( divide and conqure)
+![backlog](https://user-images.githubusercontent.com/26660809/216874135-8844b782-5c06-4b9e-b068-5f0ee87dae47.png)
+
 i tried to finish it all with everything related , but i  couldnt fix the login issue , i traced it alot , but couldnt found the bug in the UI 
 as for the search i tried to fix it , but alot still can be done , so i tried to implement SSR ( server side rendering )  and i was trying to implement SWR for easier and simplier data fetching , but i couldnt finish it as wll . it think its needs more time from my side and a bit of discussion can go here . 
 
