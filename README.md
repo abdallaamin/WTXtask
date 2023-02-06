@@ -1,11 +1,12 @@
 
-##Hello There beautifull people of WTX :
+## Hello There beautifull people of WTX :
 
 as you can see this is my purposed solution to the challenge that was giving to me , i tried to fix and make sure that i am following the mockup and every detail in both mockup and challenge.md , 
 
 Unfortunately time wasnt really on my side , 
 
-as you will see i deployed the website on vercel already and it did setup  apip line , of the things that i loved about this challenge that i created a backlog for it [images here] , and then started to work on them ( divide and conqure) i tried to finish it all with everything related , but i  couldnt fix the login issue , i traced it alot , but couldnt found the bug in the UI 
+as you will see i deployed the website on vercel already and it did setup  apip line , of the things that i loved about this challenge that i created a backlog for it 
+and then started to work on them ( divide and conqure) i tried to finish it all with everything related , but i  couldnt fix the login issue , i traced it alot , but couldnt found the bug in the UI 
 as for the search i tried to fix it , but alot still can be done , so i tried to implement SSR ( server side rendering )  and i was trying to implement SWR for easier and simplier data fetching , but i couldnt finish it as wll . it think its needs more time from my side and a bit of discussion can go here . 
 
 
