@@ -10,22 +10,22 @@ const faq = [
     {
         id: 1,
         question: "What steps would you take to make this code better?",
-        answer:"so first i started by cleaning all the redundunt and repeated code , and then i tried to but layout component that contains the main layout for the website and wrapped my app with it , and then i tried fixing and organizing more the way data fetched , by implementing SSR( server side rendering) and thinking of caching library , i tried not to use alotr of 3rd party library so not to increase the load time ",
+        answer:"so first i started by cleaning all the redundunt and repeated code , and then i tried to put a main shared  layout component that contains the main layout for the website and wrapped my app with it , and then i tried fixing and organizing more the way data fetched , by implementing SSR( server side rendering) and thinking of caching library , i tried not to use alot of 3rd party library so not to increase the load time ",
     },
     {
         id: 2,
         question: "Have you found any red- flags?",
-        answer: "alot of useEffect without dependency , same for useCall back no depencies at all , the way that fetching data and updating the states accordingly ",
+        answer: "alot of useEffect without depencies , same for useCallback no depencies at all , the way that fetching data and updating the states accordingly , the naming of some of the stuff ",
     },
     {
         id: 3,
         question: "If you were pairing with a junior dev, what would be your initial steps to start fixing this?",
-        answer: "first of as i am always having an agile mind set , for whatever project i am working on , i started by going through the code , and then identifing the possible challnges or pain points , and then i had my very one kinda of small back log , with all UI implementation , and then functuinality , and by having a view of possible tickets , i started to work on them one by one , if i am pairing with a junior , i would discuss few of the tickets and then propably assign few of the simple ui and functionality task , like working on modal component or one of the needed fullfilling components , and also i did setup a github repo with a deployment enviroment and deploytment pipeline , and tried to commit each time i finsh something and then , so if i am pairing with a junior he can setup the repo and keep pushing as well once he commits . CI/CD always  ",
+        answer: "first of as i am always having an agile mindset , for whatever project i am working on , i started by going through the code , and then identifing the possible challenges or pain points , and then i had my very one kinda of small backlog , with all UI implementation , and then functuinality , and by having a view of possible tickets , i started to work on them one by one , if i am pairing with a junior , i would discuss few of the tickets and then propably assign few of the simple ui and functionality tasks to them , like working on modal component or one of the needed fullfilling components or pages  , and also i did setup a github repo with a deployment enviroment and deploytment pipeline , and tried to commit each time i finsh something and then , so if i am pairing with a junior he can setup the repo and keep pushing as well once he commits . CI/CD always  ",
     },
     {
         id: 4,
         question: "What do you see as the major issues on this code?",
-        answer: "to much redundant code , also so much useEffect with no dependencies or the wrong one , use call back with no dependencies as well , over all the way the fetching data . the way it perform the search without using query params or forward binding for updating the queries param the way it loads the images , we can use lazy loading for that ",
+        answer: "to much redundant code , also so much useEffect with no dependencies or the wrong one , use callback with no dependencies as well , over all the way its fetching data . the way it perform the search without using query params or forward binding for updating the queries param, the way it loads the images , we can use lazy loading for that ",
     },
     {
         id:5,
@@ -63,22 +63,22 @@ const possiblefaq = [
     {
         id: 15,
         question: "If you had to make this page faster, what would you do?",
-        answer: "",
+        answer: "so first we will start by cutting any 3rd libraries that is not needed , and then we can use SWR and other caching technices for the data fetching , we can install some analysis and montering tools maybe , debug using the DEVtools to see the request and what its taking time to load or to retrieve , use lazyloading to load the images ",
     },
     {
         id: 16,
         question: "Imagine you had a loader implemented on the search page, but now you want to use it in multiple other pages, what would you do?",
-        answer: "",
+        answer: "I would make a universal Loader component that is statfull and can be used in different pages and share it between those different pages",
     },
     {
         id: 17,
         question: "Any tools/approaches you would use to make this code better?",
-        answer: "",
+        answer: "so when i approached this project i tried not to use as much tools or 3d party library as possible , as not to add to the challenge size and as to keep it fast and light , i used only material UI for the accordion on these challenges to save my time , i used SWR , and thats it , if i would love to add tools , i would probably bring tailwind css , but i didnt want to change the styling already there , as to consider if there is part of the team , that wont know it for example , i would propaply use party town to make the wibe site faster , i would use as well some of the analytics , and montering tools",
     },
     {
         id: 86,
         question: "What do you think in missing in order to make this code reach production?",
-        answer: "i tried to deployed on production ",
+        answer: "I tried to deployed this on production as you can use it already on production , but i think we will need to assign ( if there is any) enviroment variables , and then do a build and upload or files ( or somewebsites like vercel can do this to you",
     }
 
 ]
