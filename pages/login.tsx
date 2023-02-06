@@ -7,7 +7,7 @@ type Props = {
 onClose: ()=> void 
 }
 
-const Login = ({ onClose }: Props) => {
+const Login:any = ({ onClose }: Props) => {
   const [isBrowser, setIsBrowser] = useState(false);
 
   const [username, setUsername] = useState("");
@@ -87,8 +87,8 @@ const Login = ({ onClose }: Props) => {
 
   if (isBrowser) {
     return ReactDOM.createPortal(
-      modal,
-      document.getElementById("modal-root")
+      Login,
+      document.getElementById("modal-root") 
     );
   } else {
     return null;
