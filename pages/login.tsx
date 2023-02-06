@@ -88,7 +88,7 @@ const Login:any = ({ onClose }: Props) => {
   if (isBrowser) {
     return ReactDOM.createPortal(
       Login,
-      document.getElementById("modal-root") 
+      document.getElementById('modal-root')! 
     );
   } else {
     return null;
