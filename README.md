@@ -1,7 +1,7 @@
 
 ## Hello There beautifull people of WTX :
 
-# try live demo from here [https://wtxtask.vercel.app/]
+# try live demo from [here](https://wtxtask.vercel.app/)
 
 as you can see this is my purposed solution to the challenge that was giving to me , i tried to fix and make sure that i am following the mockup and every detail in both mockup and challenge.md , 
 
